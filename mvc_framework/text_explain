@@ -1,0 +1,38 @@
+public_directory =>
+                    main index where all pages are redirected
+                    CSS JS img directories htaccess_file
+------> htaccess 
+
+
+
+app_directory => (entire application)
+                libraries config models views controllers helpers directories require_file htaccess_file
+------> htaccess
+
+
+
+(((((((((steps from 0 to hero)))))))))
+
+(((((Core file)))))
+- get what is inside url
+(($init_costruct calls another $init_construct)) 
+- you get element check ifi there's a controller to it in controllers file-->require it----> instaniate it
+- whatever you add as url(1)->if method yes call it //// if method no redirect to call index
+
+
+((((Controller file))))-->(parent)->(Base)
+- have model -> require its file 
+- have view -> require its file + passed dynamic data to specific view
+
+
+((((config==>>config file))))
+define constants there like db_connection_values & url & app & sitename
+
+
+(((((((((Database file)))))))))
+we deal with PDO and and quering
+
+
+    Core------init--------------->controller-------------init----------------->model----------------init---------------->Database
+
+iniated in require file<-(init)<----(init + passing data to view)<------(init + perform Q)<-----------------------------queries
